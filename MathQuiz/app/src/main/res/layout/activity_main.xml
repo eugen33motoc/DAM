@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="?attr/actionBarSize">
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="?android:attr/windowBackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/bottom_nav_menu" />
+
+
+    <Button
+        android:id="@+id/btn_start"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:background="@color/teal_200"
+        android:text="GO"
+        android:textSize="36sp"
+        android:textStyle="bold"
+        app:backgroundTint="@color/teal_200"
+        app:layout_constraintBottom_toTopOf="@+id/nav_view"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ProgressBar
+        android:id="@+id/prog_timer"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:max="30"
+        android:progress="20"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tv_timer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/prog_timer" />
+
+    <TextView
+        android:id="@+id/tv_score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView1"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/prog_timer" />
+
+    <TextView
+        android:id="@+id/tv_questions"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="@+id/prog_timer"
+        app:layout_constraintStart_toStartOf="@+id/prog_timer"
+        app:layout_constraintTop_toBottomOf="@id/prog_timer" />
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="0dp"
+        android:layout_height="400dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_questions">
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn_answear0"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:text="Button" />
+
+            <Button
+                android:id="@+id/btn_answear1"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:text="Button" />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn_answear3"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:text="Button" />
+
+            <Button
+                android:id="@+id/btn_answear2"
+                android:layout_width="wrap_content"
+                android:layout_height="200dp"
+                android:layout_weight="1"
+                android:text="Button" />
+        </TableRow>
+
+    </TableLayout>
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/nav_view"
+        app:layout_constraintEnd_toEndOf="@+id/nav_view"
+        app:layout_constraintStart_toStartOf="@+id/nav_view"
+        app:layout_constraintTop_toBottomOf="@+id/tableLayout" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
